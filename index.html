@@ -139,8 +139,8 @@
                 <li><strong>NASA Space Apps Challenge – Selected in Top 50 teams out of 850.</strong></li>
                 <li><strong>1st Place Winner – College Level Quiz Competition (SVEEP-Cell, GGITS, Aug 2025)</strong></li>
                 <li><strong>3rd Place – District Level SVEEP Quiz Competition</strong></li>
-                <li>Attendance Hashgraph Developer – <a href="https://www.credly.com/badges/..." target="_blank">Hashgraph Association (Aug 2025)</a></li>
-                <li>Deloitte Australia – <a href="https://www.credly.com/badges/..." target="_blank">Data Analytics Job Simulation (Forage, Aug 2025)</a></li>
+                <li>Attendance Hashgraph Developer –<a href="https://www.linkedin.com/in/laxmi-sahu-728790321">Hashgraph Association (Aug 2025)</a></li>
+                <li>Deloitte Australia ––<a href="https://www.linkedin.com/in/laxmi-sahu-728790321">Data Analytics Job Simulation (Forage, Aug 2025)</a></li>
                 <li><a href="https://www.credly.com/badges/..." target="_blank">Introduction to Cyber Security – by Cisco</a></li>
                 <li><a href="https://www.credly.com/badges/..." target="_blank">Python Essentials 2 – by Cisco</a></li>
                 <li><a href="https://www.credly.com/badges/..." target="_blank">Introduction to Data Science – by Cisco</a></li>
@@ -215,6 +215,11 @@
                         Send Message <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+                    Message sent successfully!
+                </div>
             </form>
 
             <!-- Contact Via Section -->
@@ -261,5 +266,20 @@
     <!-- JS Files -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Custom JS for Form Submission -->
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').on('submit', function(e) {
+                e.preventDefault(); // Prevent default form submission
+                
+                // Show success message
+                $('#successMessage').show();
+                
+                // Optionally, reset the form after showing the message
+                this.reset();
+            });
+        });
+    </script>
 </body>
 </html>
